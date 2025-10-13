@@ -1,5 +1,5 @@
 
-INSERT INTO MANUFACTURERS (Manufacturer_ID, Manufacturer_Name, Country, Founded_Year, Revenue_USD_Billion)
+INSERT INTO MANUFACTURERS (Manufacturer_ID, Manufacturer_Name, Country, YearFounded, Revenue_USD_Billion)
 VALUES
 (1, 'Toyota', 'Japan', '1937', 275),
 (2, 'Ford', 'USA', '1903', 160),
@@ -55,46 +55,46 @@ VALUES
 
 INSERT INTO REGIONS (Region_ID, Region_Name)
 VALUES
-(1,'North America'),
-(2, 'Europe'),
-(3, 'Asia'),
-(4, 'South America'),
-(5, 'Africa'),
-(6, 'Oceania'),
-(7, 'Middle East');
+('NA','North America'),
+('EU', 'Europe'),
+('AS', 'Asia'),
+('SA', 'South America'),
+('AF', 'Africa'),
+('OC', 'Oceania'),
+('ME', 'Middle East');
 
 
-INSERT INTO SALES (Sales_ID, Model_ID, Region, Year, Units_Sold)
+INSERT INTO SALES (Sales_ID, Model_ID, Region_ID, Sales_Year, Units_Sold)
 VALUES
-(1, 1, 'Asia', '2023', 310000),
-(2, 2, 'North America', '2023', 290000),
-(3, 3, 'Noth America', '2023', 410000),
-(4, 4, 'Europe', '2023', 220000),
-(5, 5, 'Europe', '2023', 260000),
-(6, 6, 'Asia', '2023', 200000),
-(7, 7, 'Asia', '2023', 200000),
-(8, 8, 'Europe', '2023', 230000),
-(9, 9, 'Europe', '2023', 230000),
-(10, 10, 'North America', '2023', 180000),
-(11, 11, 'Asia', '2023', 210000),
-(12, 12, 'Europe', '2023', 160000),
-(13, 13, 'Asia', '2023', 290000),
-(14, 14, 'North America', '2023', 240000),
-(15, 15, 'North America', '2023', 350000),
-(16, 16, 'Europe', '2023', 320000),
-(17, 17, 'Asia', '2023', 200000),
-(18, 18, 'North America', '2023', 220000),
-(19, 19, 'Europe', '2023', 190000),
-(20, 20, 'Asia', '2023', 170000),
-(21, 21, 'North America', '2023', 380000),
-(22, 22, 'South America', '2023', 160000),
-(23, 23, 'Europe', '2023', 140000),
-(24, 24, 'Africa', '2023', 130000),
-(25, 25, 'North America', '2023', 180000),
-(26, 26, 'North America', '2023', 200000),
-(27, 27, 'Europe', '2023', 130000),
-(28, 28, 'Europe', '2023', 4500),
-(29, 29, 'North America', '2023', 3500),
-(30, 30, 'Asia', '2023', 5000),
-(31, 31, 'Europe', '2023', 500),
-(32, 32, 'Middle East', '2023', 100);
+(1, 1, 'NA', '2023', 310000),
+(2, 2, 'NA', '2023', 290000),
+(3, 3, 'NA', '2023', 410000),
+(4, 4, 'EU', '2023', 220000),
+(5, 5, 'EU', '2023', 260000),
+(6, 6, 'AS', '2023', 200000),
+(7, 7, 'AS', '2023', 200000),
+(8, 8, 'EU', '2023', 230000),
+(9, 9, 'EU', '2023', 230000),
+(10, 10, 'NA', '2023', 180000),
+(11, 11, 'AS', '2023', 210000),
+(12, 12, 'EU', '2023', 160000),
+(13, 13, 'AS', '2023', 290000),
+(14, 14, 'NA', '2023', 240000),
+(15, 15, 'NA', '2023', 350000),
+(16, 16, 'EU', '2023', 320000),
+(17, 17, 'AS', '2023', 200000),
+(18, 18, 'NA', '2023', 220000),
+(19, 19, 'EU', '2023', 190000),
+(20, 20, 'AS', '2023', 170000),
+(21, 21, 'NA', '2023', 380000),
+(22, 22, 'SA', '2023', 160000),
+(23, 23, 'EU', '2023', 140000),
+(24, 24, 'AF', '2023', 130000),
+(25, 25, 'NA', '2023', 180000),
+(26, 26, 'NA', '2023', 200000),
+(27, 27, 'EU', '2023', 130000),
+(28, 28, 'EU', '2023', 4500),
+(29, 29, 'NA', '2023', 3500),
+(30, 30, 'AS', '2023', 5000),
+(31, 31, 'EU', '2023', 500),
+(32, 32, 'ME', '2023', 100);

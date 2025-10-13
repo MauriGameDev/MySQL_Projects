@@ -1,13 +1,9 @@
-DROP DATABASE IF EXISTS Car_Manufacturers;
-CREATE DATABASE Car_Manufacturers;
-USE Car_Manufactureres;
-
 
 CREATE TABLE MANUFACTURERS (
     Manufacturer_ID INT AUTO_INCREMENT PRIMARY KEY,
     Manufacturer_Name VARCHAR(35) NOT NULL,
     Country VARCHAR(35) NOT NULL,
-    Founded_Year INT NOT NULL,
+    YearFounded INT NOT NULL,
     Revenue_USD_Billion INTEGER NOT NULL
 );
 
@@ -23,18 +19,18 @@ CREATE TABLE CARS (
 );
 
 CREATE TABLE REGIONS (
-    Region_ID INT AUTO_INCREMENT PRIMARY KEY,
-    Region_Name VARCHAR(55)
+    Region_ID VARCHAR(2) PRIMARY KEY,
+    Region_Name VARCHAR(55) NOT NULL
 );
 
 
 CREATE TABLE SALES (
-    Sales_ID INT NOT NULL,
-    Model_ID INT NOT NULL,
-    Region_ID INT NOT NULL,
-    Year INT NOT NULL,
+    Sales_ID INT AUTO_INCREMENT,
+    Model_ID INT,
+    Region_ID VARCHAR(2),
+    Sale_Year VARCHAR(4) NOT NULL,
     Units_Sold INT NOT NULL,
-    PRIMARY kEY(Sales_ID),
+    PRIMARY KEY(Sales_ID),
     FOREIGN KEY (Model_ID) REFERENCES CARS (Model_ID),
     FOREIGN KEY (Region_ID) REFERENCES REGIONS(Region_ID)
 );
