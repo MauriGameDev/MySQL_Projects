@@ -1,4 +1,4 @@
-
+-- CREATE TABLES
 CREATE TABLE MANUFACTURERS (
     Manufacturer_ID INT AUTO_INCREMENT PRIMARY KEY,
     Manufacturer_Name VARCHAR(35) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE CARS (
     Model_Name VARCHAR(35) NOT NULL,
     Car_Type VARCHAR(35),
     Launch_Year INT NOT NULL,
-    Car_Price INT,
+    Car_Price DECIMAL(10,2),
     Manufacturer_ID INT,
     FOREIGN KEY(Manufacturer_ID) REFERENCES MANUFACTURERS(Manufacturer_ID)
 );
@@ -28,7 +28,7 @@ CREATE TABLE SALES (
     Sales_ID INT AUTO_INCREMENT,
     Model_ID INT,
     Region_ID VARCHAR(2),
-    Sale_Year VARCHAR(4) NOT NULL,
+    Sales_Year VARCHAR(4) NOT NULL,
     Units_Sold INT NOT NULL,
     PRIMARY KEY(Sales_ID),
     FOREIGN KEY (Model_ID) REFERENCES CARS (Model_ID),

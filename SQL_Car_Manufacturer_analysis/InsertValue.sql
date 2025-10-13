@@ -1,4 +1,4 @@
-
+-- INSERT VALUES
 INSERT INTO MANUFACTURERS (Manufacturer_ID, Manufacturer_Name, Country, YearFounded, Revenue_USD_Billion)
 VALUES
 (1, 'Toyota', 'Japan', '1937', 275),
