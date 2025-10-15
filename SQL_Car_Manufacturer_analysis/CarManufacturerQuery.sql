@@ -53,7 +53,11 @@ ORDER BY Total_Units_Sold DESC
 LIMIT 1;
 
 --Q10. What is the average car price per manufacturer
-SELECT MANUFACTURERS.Manufacturer_Name, AVG(CARS.Car_Price) AS Average_Car_Price
+SELECT MANUFACTURERS.Manufacturer_Name, FORMAT(AVG(CARS.Car_Price),2) AS Average_Car_Price
 FROM CARS
 JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
-GROUP BY MANUFACTURERS.Manufacturer_Name;
+GROUP BY MANUFACTURERS.Manufacturer_Name
+ORDER BY Average_Car_Price ASC;
+
+
+--Query Questions Intermeditate
