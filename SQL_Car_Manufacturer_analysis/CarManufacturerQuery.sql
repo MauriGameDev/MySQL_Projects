@@ -14,7 +14,7 @@ SELECT Manufacturer_Name, Revenue_USD_Billion
 FROM MANUFACTURERS
 WHERE Revenue_USD_Billion > 100;
 
---Q4. List all car models whose tyoe is "SUV"
+--Q4. List all car models whose type is "SUV"
 SELECT Model_Name, Car_Type
 FROM CARS
 WHERE car_type = 'SUV';
@@ -61,3 +61,38 @@ ORDER BY Average_Car_Price ASC;
 
 
 --Query Questions Intermeditate
+
+--Q1. Total Revenue per Manufacturer
+SELECT MANUFACTURERS.Manufacturer_Name, FORMAT(SUM(SALES.Units_Sold * CARS.Car_Price),2) AS Total_Revenue_USD
+FROM CARS
+JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
+JOIN SALES ON CARS.Model_ID = SALES.Model_ID
+GROUP BY MANUFACTURERS.Manufacturer_Name
+ORDER BY MANUFACTURERS.Manufacturer_Name ASC;
+
+--Q2. Year over Year comparsion total units sold by Manufactureres 2020 - 21
+SELECT MANUFACTURERS.Manufacturer_Name, 
+SUM(CASE WHEN SALES.Sales_Year = '2020' THEN SALES.Units_Sold ELSE 0 END) AS Total_UnitsSold_2020,
+SUM(CASE WHEN SALES.Sales_Year = '2021' THEN SALES.Units_Sold ELSE 0 END) AS Total_UnitsSold_2021,
+(SUM(CASE WHEN SALES.Sales_Year = '2021' THEN SALES.Units_Sold ELSE 0 END) -
+SUM(CASE WHEN SALES.Sales_Year = '2020' THEN SALES.Units_Sold ELSE 0 END)) AS Year_Over_Year_change
+FROM SALES
+JOIN CARS ON CARS.Model_ID = SALES.Model_ID
+JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
+GROUP BY MANUFACTURERS.Manufacturer_Name;
+
+--Q3. Most Popular Car Model by Region
+
+--Q4. Average Price by Car Type and Manufacturere
+
+--Q5. Models still in Production
+
+--Q6. Top Selling Manufacturer by Region
+
+--Q7. Regional Market Share
+
+--Q8. Average Units Sold per Model
+
+--Q9. Most Expernsive model per manufacturer
+
+--Q10. MAnufacturer Presence by Region
