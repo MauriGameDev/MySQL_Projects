@@ -82,6 +82,16 @@ JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
 GROUP BY MANUFACTURERS.Manufacturer_Name;
 
 --Q3. Most Popular Car Model by Region
+SELECT REGIONS.Region_Name, MANUFACTURERS.Manufacturer_Name, CARS.Model_Name, SUM(SALES.Units_Sold) AS Popular_Car_In_Region
+FROM SALES
+JOIN CARS ON CARS.Model_ID = SALES.Model_ID 
+JOIN REGIONS ON REGIONS.Region_ID = SALES.Region_ID
+JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
+GROUP BY REGIONS.Region_Name, MANUFACTURERS.Manufacturer_Name, CARS.Model_Name
+ORDER BY REGIONS.Region_Name, Popular_Car_In_Region DESC;
+
+
+
 
 --Q4. Average Price by Car Type and Manufacturere
 
