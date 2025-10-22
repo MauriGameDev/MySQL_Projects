@@ -74,10 +74,9 @@ ORDER BY MANUFACTURERS.Manufacturer_Name ASC;
 SELECT MANUFACTURERS.Manufacturer_Name, 
 SUM(CASE WHEN SALES.Sales_Year = '2020' THEN SALES.Units_Sold ELSE 0 END) AS Total_UnitsSold_2020,
 SUM(CASE WHEN SALES.Sales_Year = '2021' THEN SALES.Units_Sold ELSE 0 END) AS Total_UnitsSold_2021,
-(SUM(CASE WHEN SALES.Sales_Year = '2021' THEN SALES.Units_Sold ELSE 0 END) -
-SUM(CASE WHEN SALES.Sales_Year = '2020' THEN SALES.Units_Sold ELSE 0 END)) AS Year_Over_Year_change
+(SUM(CASE WHEN SALES.Sales_Year = '2021' THEN SALES.Units_Sold ELSE 0 END) - SUM(CASE WHEN SALES.Sales_Year = '2020' THEN SALES.Units_Sold ELSE 0 END)) AS Year_Over_Year_change
 FROM SALES
-JOIN CARS ON CARS.Model_ID = SALES.Model_ID
+JOIN CARS ON CARS.Model_ID = SALES.Model_IDgit 
 JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
 GROUP BY MANUFACTURERS.Manufacturer_Name;
 
@@ -89,6 +88,10 @@ JOIN REGIONS ON REGIONS.Region_ID = SALES.Region_ID
 JOIN MANUFACTURERS ON MANUFACTURERS.Manufacturer_ID = CARS.Manufacturer_ID
 GROUP BY REGIONS.Region_Name, MANUFACTURERS.Manufacturer_Name, CARS.Model_Name
 ORDER BY REGIONS.Region_Name, Popular_Car_In_Region DESC;
+
+
+
+
 
 
 

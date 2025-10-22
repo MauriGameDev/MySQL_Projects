@@ -1,0 +1,44 @@
+--MICROSOFT ACCESS Version
+
+CREATE DATABASE Manufacturer_Sales_Anaylsis;
+USE Manufacturer_Sales_Anaylsis;
+
+
+
+CREATE TABLE MANUFACTURER (
+    Manufacturer_ID INTEGER PRIMARY KEY,
+    Name VARCHAR(35) NOT NULL,
+    Country VARCHAR(25) NOT NULL,
+    YearFounded INTEGER NOT NULL,
+    Revenue INTEGER NOT NULL
+);
+
+
+CREATE TABLE CAR(
+    CarModel_ID INT PRIMARY KEY,
+    Manufacturer_ID INTEGER,
+    CarModel_Name VARCHAR(35) NOT NULL,
+    Type VARCHAR(35) NOT NULL,
+    LaunchYear INTEGER NOT NULL,
+    Price FLOAT,
+    CONSTRAINT FK_MANUFACTURER FOREIGN KEY (Manufacturer_ID) 
+    REFERENCES MANUFACTURER (Manufacturer_ID)
+);
+
+CREATE TABLE REGION (
+    Region_ID VARCHAR(2) PRIMARY KEY,
+    Name VARCHAR(55) NOT NULL
+);
+
+CREATE TABLE SALES (
+    Sales_ID INTEGER PRIMARY KEY,
+    CarModel_ID INTEGER NOT NULL,
+    Region_ID VARCHAR(2) NOT NULL,
+    Year VARCHAR(4) NOT NULL,
+    Units_Sold INTEGER NOT NULL,
+    CONSTRAINT FK_CAR FOREIGN KEY (CarModel_ID)
+    REFERENCES CAR (CarModel_ID),
+    CONSTRAINT FK_REGION FOREIGN KEY (Region_ID) 
+    REFERENCES REGION (Region_ID)
+);
+

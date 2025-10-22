@@ -10,11 +10,11 @@ CREATE TABLE MANUFACTURERS (
 
 CREATE TABLE CARS (
     Model_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Manufacturer_ID INT,
     Model_Name VARCHAR(35) NOT NULL,
     Car_Type VARCHAR(35),
     Launch_Year INT NOT NULL,
     Car_Price DECIMAL(10,2),
-    Manufacturer_ID INT,
     FOREIGN KEY(Manufacturer_ID) REFERENCES MANUFACTURERS(Manufacturer_ID)
 );
 
