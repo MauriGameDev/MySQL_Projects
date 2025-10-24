@@ -1,6 +1,7 @@
+--MySQL Workbench Version
+
 -- INSERT VALUES
-INSERT INTO MANUFACTURERS (Manufacturer_ID, Manufacturer_Name, Country, YearFounded, Revenue_USD_Billion)
-VALUES
+INSERT INTO MANUFACTURER (Manufacturer_ID, Name, Country, YearFounded, Revenue) VALUES
 (1, 'Toyota', 'Japan', '1937', 275),
 (2, 'Ford', 'USA', '1903', 160),
 (3, 'Volkswagen', 'Germany', '1937', 300),
@@ -17,44 +18,8 @@ VALUES
 (14, 'McLaren', 'United Kingdom', '1963', 25),
 (15, 'Bugatti', 'France', '1909', 20);
 
-INSERT INTO CARS (Model_ID, Manufacturer_ID, Model_Name, Car_Type, Launch_Year, Car_Price)
-VALUES
-(1, 1, 'Corolla', 'Sedan', '1968', 22000),
-(2, 1, 'RAV4', 'SUV', '1995', 290000),
-(3, 2, 'F-150','Truck', '1975', 41000),
-(4, 2, 'Mustang', 'Coupe', '1964', 37000),
-(5, 3, 'Golf', 'Hatchback', '1975', 250000),
-(6, 3, 'Tiguan', 'SUV', '2008', 32000),
-(7, 4, 'Sonata', 'Sedan', '1988', 24000),
-(8, 4, 'Tucson', 'SUV', '2005', 28000),
-(9, 5, '3 Series', 'Sedan', '1976', 42000),
-(10, 5, 'X5', 'SUV', '2000', 42000),
-(11, 6, 'C-Class', 'Sedan', '1994', 43000),
-(12, 6, 'GLE', 'SUV', '2016', 65000),
-(13, 7, 'Civic', 'Sedan', '1973', 23000),
-(14, 7, 'CR-V', 'SUV', '1997', 29000),
-(15, 8, 'Model 3', 'Sedan', '2017', 40000),
-(16, 8, 'Model Y', 'SUV', '2020', 48000),
-(17, 9, 'Altima', 'Sedan', '1993', 28000),
-(18, 9, 'Rogue', 'SUV', '2008', 28000),
-(19, 10, 'Sportage', 'SUV', '1995', 27000),
-(20, 10, 'K5', 'Sedan', '2021', 25000),
-(21, 11, 'Silverado', 'Truck', '1999', 43000),
-(22, 11, 'Malibu', 'Sedan', '1964', 23000),
-(23, 12, '208', 'Hatchback', '2019', 21000),
-(24, 12, '3008', 'SUV', '2016', 31000),
-(25, 13, 'Challenger', 'Coupe', '1970', 35000),
-(26, 13, 'Charger', 'Sedan', '1966', 37000),
-(27, 13, 'Durango', 'SUV', '1998', 42000),
-(28, 14, '720S', 'Supercar', '2017', 300000),
-(29, 14, 'Artura', 'Hybrid Supercar', '2023', 250000),
-(30, 14, 'GT', 'Grand Tourer', '2020', 210000),
-(31, 15, 'Chiron', 'Hypercar', '2017', 300000),
-(32, 15, 'Divo', 'Hypercar', '2019', 5800000);
 
-
-INSERT INTO REGIONS (Region_ID, Region_Name)
-VALUES
+INSERT INTO REGION (Region_ID, Name) VALUES
 ('NA','North America'),
 ('EU', 'Europe'),
 ('AS', 'Asia'),
@@ -63,9 +28,42 @@ VALUES
 ('OC', 'Oceania'),
 ('ME', 'Middle East');
 
-INSERT INTO SALES (Sales_ID, Model_ID, Region_ID, Sales_Year, Units_Sold)
-VALUES
+INSERT INTO CAR (CarModel_ID, Manufacturer_ID, CarModel_Name, Type, LaunchYear, Price) VALUES
+(1, 1, 'Corolla', 'Sedan', '1968', 22000)
+(2, 1, 'RAV4', 'SUV', '1995', 29000)
+(3, 2, 'F-150','Truck', '1975', 41000)
+(4, 2, 'Mustang', 'Coupe', '1964', 37000)
+(5, 3, 'Golf', 'Hatchback', '1975', 25000)
+(6, 3, 'Tiguan', 'SUV', '2008', 32000)
+(7, 4, 'Sonata', 'Sedan', '1988', 24000)
+(8, 4, 'Tucson', 'SUV', '2005', 28000)
+(9, 5, '3 Series', 'Sedan', '1976', 42000)
+(10, 5, 'X5', 'SUV', '2000', 42000)
+(11, 6, 'C-Class', 'Sedan', '1994', 43000)
+(12, 6, 'GLE', 'SUV', '2016', 65000)
+(13, 7, 'Civic', 'Sedan', '1973', 23000)
+(14, 7, 'CR-V', 'SUV', '1997', 29000)
+(15, 8, 'Model 3', 'Sedan', '2017', 40000)
+(16, 8, 'Model Y', 'SUV', '2020', 48000)
+(17, 9, 'Altima', 'Sedan', '1993', 28000)
+(18, 9, 'Rogue', 'SUV', '2008', 28000)
+(19, 10, 'Sportage', 'SUV', '1995', 27000)
+(20, 10, 'K5', 'Sedan', '2021', 25000)
+(21, 11, 'Silverado', 'Truck', '1999', 43000)
+(22, 11, 'Malibu', 'Sedan', '1964', 23000)
+(23, 12, '208', 'Hatchback', '2019', 21000)
+(24, 12, '3008', 'SUV', '2016', 31000)
+(25, 13, 'Challenger', 'Coupe', '1970', 35000)
+(26, 13, 'Charger', 'Sedan', '1966', 37000)
+(27, 13, 'Durango', 'SUV', '1998', 42000)
+(28, 14, '720S', 'Supercar', '2017', 300000)
+(29, 14, 'Artura', 'Hybrid Supercar', '2023', 250000)
+(30, 14, 'GT', 'Grand Tourer', '2020', 210000)
+(31, 15, 'Chiron', 'Hypercar', '2017', 300000)
+(32, 15, 'Divo', 'Hypercar', '2019', 5800000)
 
+
+INSERT INTO SALES (Sales_ID, CarModel_ID, Region_ID, Year, Units_Sold) VALUES
 (1, 1, 'EU', '2020', 118200),  --Year 2020, Each Car Based region
 (2, 1, 'AS', '2020', 133500),
 (3, 1, 'SA', '2020', 21900),
@@ -257,7 +255,8 @@ VALUES
 (198, 32, 'SA', '2020', 253000),
 (199, 32, 'AF', '2020', 1320),
 (200, 32, 'OC', '2020', 467500),
-(201, 32, 'ME', '2020', 352000),
+(201, 32, 'ME', '2020', 352000);
+
 (230, 1, 'EU', '2021', 137500),  --Year 2021, Each Car Based region
 (231, 1, 'AS', '2021', 100000),
 (232, 1, 'SA', '2021', 253000),
