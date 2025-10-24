@@ -1,1 +1,1 @@
-SQL Car Manufacturer Sales Analysis PROJECT 
+ Manufacturer Sales Analysis PROJECT 
