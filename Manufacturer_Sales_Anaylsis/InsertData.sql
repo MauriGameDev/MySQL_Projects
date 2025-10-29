@@ -1,22 +1,22 @@
 --MySQL Workbench Version
 
 -- INSERT VALUES
-INSERT INTO MANUFACTURER (Manufacturer_ID, Name, Country, YearFounded, Revenue) VALUES
-(1, 'Toyota', 'Japan', '1937', 275),
-(2, 'Ford', 'USA', '1903', 160),
-(3, 'Volkswagen', 'Germany', '1937', 300),
-(4, 'Hyundai', 'South Korea', '1967', 300),
-(5, 'BMW', 'Germany', '1916', 150),
-(6, 'Merceded-Benz', 'Germany', '1926', 155),
-(7, 'Honda', 'Japan', '1948', 140),
-(8, 'Tesla', 'USA', '2003', 95),
-(9, 'Nissan', 'Japan', '1933', 90),
-(10, 'Kia', 'South Korea', '1944', 80),
-(11, 'Chevrolet', 'USA', '1911', 130),
-(12, 'Peugeot', 'France', '1810', 70),
-(13, 'Dodge', 'USA', '1900', 75),
-(14, 'McLaren', 'United Kingdom', '1963', 25),
-(15, 'Bugatti', 'France', '1909', 20);
+INSERT INTO MANUFACTURER (Manufacturer_ID, Name, Country, YearFounded) VALUES
+(1, 'Toyota', 'Japan', '1937'),
+(2, 'Ford', 'USA', '1903'),
+(3, 'Volkswagen', 'Germany', '1937'),
+(4, 'Hyundai', 'South Korea', '1967'),
+(5, 'BMW', 'Germany', '1916'),
+(6, 'Merceded-Benz', 'Germany', '1926'),
+(7, 'Honda', 'Japan', '1948'),
+(8, 'Tesla', 'USA', '2003'),
+(9, 'Nissan', 'Japan', '1933'),
+(10, 'Kia', 'South Korea', '1944'),
+(11, 'Chevrolet', 'USA', '1911'),
+(12, 'Peugeot', 'France', '1810'),
+(13, 'Dodge', 'USA', '1900'),
+(14, 'McLaren', 'United Kingdom', '1963'),
+(15, 'Bugatti', 'France', '1909');
 
 
 INSERT INTO REGION (Region_ID, Name) VALUES
@@ -449,6 +449,7 @@ INSERT INTO SALES (Sales_ID, CarModel_ID, Region_ID, Year, Units_Sold) VALUES
 (419, 32, 'AF', '2021', 1320),
 (420, 32, 'OC', '2021', 522500),
 (421, 32, 'ME', '2021', 352000),
+
 (422, 1, 'EU', '2022', 137500),   --Year 2022, Each Car Based region
 (423, 1, 'AS', '2022', 100000),
 (424, 1, 'SA', '2022', 241500),
@@ -641,6 +642,7 @@ INSERT INTO SALES (Sales_ID, CarModel_ID, Region_ID, Year, Units_Sold) VALUES
 (610, 32, 'AF', '2022', 1260),
 (611, 32, 'OC', '2022', 522500),
 (612, 32, 'ME', '2022', 352000),
+
 (613, 1, 'EU', '2024', 149000),    --Year 2024, Each Car Based region
 (614, 1, 'AS', '2024', 94000),
 (615, 1, 'SA', '2024', 258000),
@@ -835,8 +837,7 @@ INSERT INTO SALES (Sales_ID, CarModel_ID, Region_ID, Year, Units_Sold) VALUES
 (804, 32, 'ME', '2024', 340000);
 
 
-INSERT INTO SALES (Sales_ID, Model_ID, Region_ID, Sales_Year, Units_Sold)
-VALUES
+
 (1, 1, 'NA', '2023', 310000),
 (2, 2, 'NA', '2023', 290000),
 (3, 3, 'NA', '2023', 410000),
