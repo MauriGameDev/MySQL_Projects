@@ -1,19 +1,166 @@
 --Expansion of Tables for each Manufacturer
 
-CREATE TABLE TOYOTA {
-    ID_No INT PRIMARY KEY,
-    Manufacturer_ID INT DEFAULT 1,
+CREATE TABLE TOYOTA (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 1,
     CarModel_ID INT NOT NULL,
     CarModel_Name VARCHAR(35),
     Type VARCHAR(35),
-    Price INT NOT NULL
-};
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
 
-CREATE TABLE FORD {
-    ID_No INT PRIMARY KEY,
-    Manufacturer_ID INT DEFAULT 2,
-    CarModel_ID INT NOT NULL,
+CREATE TABLE FORD (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 2,
+    CarModel_ID INTEGER NOT NULL,
     CarModel_Name VARCHAR(35),
     Type VARCHAR(35),
-    Price INT NOT NULL
-};
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE VOLKSWAGEN (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 3,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE HYUNDAI (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 4,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE BMW (
+    ID_No INT PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 5,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE MERCEDED_BENZ (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 6,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE HONDA (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 7,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE TESLA (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 8,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE NISSAN (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 9,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE KIA (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 10,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE CHEVROLET (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 11,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE PEUGEOT (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 12,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE DODGE (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 13,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE MCLAREN (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 14,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);
+
+CREATE TABLE BUGATTI (
+    ID_No INTEGER PRIMARY KEY,
+    Manufacturer_ID INTEGER DEFAULT 15,
+    CarModel_ID INTEGER NOT NULL,
+    CarModel_Name VARCHAR(35),
+    Type VARCHAR(35),
+    Price INTEGER NOT NULL,
+    FOREIGN KEY (Manufacturer_ID) REFERENCES MANUFACTURER(Manufacturer_ID),
+    FOREIGN KEY (CarModel_ID) REFERENCES CAR (CarModel_ID)
+);

@@ -62,9 +62,9 @@ INSERT INTO CAR (CarModel_ID, Manufacturer_ID, CarModel_Name, Type, LaunchYear, 
 (31, 15, 'Chiron', 'Hypercar', '2017', 300000)
 (32, 15, 'Divo', 'Hypercar', '2019', 5800000)
 
-
+--Year 2020, Each Car Based region
 INSERT INTO SALES (Sales_ID, CarModel_ID, Region_ID, Year, Units_Sold) VALUES
-(1, 1, 'EU', '2020', 118200),  --Year 2020, Each Car Based region
+(1, 1, 'EU', '2020', 118200),  
 (2, 1, 'AS', '2020', 133500),
 (3, 1, 'SA', '2020', 21900),
 (4, 1, 'AF', '2020', 1080),
