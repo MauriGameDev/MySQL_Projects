@@ -1,6 +1,6 @@
 --MySQL Workbench Version
 
---CREATE DATABASE <-- FOR MySQL WorkBench ONLY
+--FOR MySQL WorkBench ONLY
 CREATE DATABASE Manufacturer_Sales_Anaylsis;
 USE Manufacturer_Sales_Anaylsis;
 
@@ -13,7 +13,6 @@ CREATE TABLE MANUFACTURER (
     YearFounded INTEGER NOT NULL,
     Revenue INTEGER NOT NULL
 );
-
 
 CREATE TABLE CAR(
     CarModel_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,4 +41,3 @@ CREATE TABLE SALES (
     CONSTRAINT FK_REGION FOREIGN KEY (Region_ID) 
     REFERENCES REGION (Region_ID)
 );
-
